@@ -7,6 +7,9 @@ Just run the script and follow the directions.
 
 # Uninstall
 If you did not modify the script postfix it should be "NvencPenetalAutoScript", try this:
-`sudo apt-get remove "$(apt list -i | grep "NvencPenetalAutoScript" | cut -d/ -f1)"`
-And if you do not want to force a remove unless there is a new version:
-`sudo apt-mark unhold "$(apt list -i | grep "NvencPenetalAutoScript" | cut -d/ -f1)"`
+
+`sudo apt-get remove $(apt list -i | grep "NvencPenetalAutoScript" | cut -d/ -f1)`
+
+And if you do not want to force a remove unless there is a new version or the packages are not needed:
+
+`sudo apt-mark unhold $(apt list -i | grep "NvencPenetalAutoScript" | cut -d/ -f1) && sudo apt-get autoremove`
