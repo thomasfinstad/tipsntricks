@@ -45,7 +45,7 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # Just asking for sudo access now because why not.
-sudo echo "Nvidia makes using NVENC way harder than it has to be in linux" 2>&1 >/dev/null 
+sudo echo "Nvidia makes using NVENC way harder than it has to be in linux" 2>&1 >/dev/null
 
 chkexit (){
   if [[ $1 -ne 0 ]]; then
@@ -90,11 +90,11 @@ unzip "$nvidia_sdk_zip" -d "$nvidiadir"
 chkexit $?
 
 echo -e "$prefix Finding files to copy over to system"
-nvidia_include_files=$(ls $nvidia_sdk_folder/Samples/common/inc/*.h | xargs -n1 basename)
+nvidia_include_files=$(ls $nvidia_sdk_folder/include/*.h | xargs -n1 basename)
 
-echo -e "$prefix Copying files from '$nvidia_sdk_folder/Samples/common/inc' to '/usr/local/include'"
+echo -e "$prefix Copying files from '$nvidia_sdk_folder/include' to '/usr/local/include'"
 for file in $nvidia_include_files; do
-  sudo cp -i "$nvidia_sdk_folder/Samples/common/inc/$file" "/usr/local/include"
+  sudo cp -i "$nvidia_sdk_folder/include/$file" "/usr/local/include"
   chkexit $?
 done
 
@@ -204,7 +204,7 @@ echo -e "$prefix Marking packages with hold so they dont get overwritten when ne
 sudo apt-mark hold $(ls $versiondir | grep .deb | cut -d_ -f1)
 chkexit $?
 
-echo 
+echo
 echo -e "#############################################################################"
 echo -e "#"
 echo -e "#"
