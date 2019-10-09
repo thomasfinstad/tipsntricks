@@ -296,5 +296,5 @@ Usage help: `obs-cut -h`
 example file: Replay_2019-10-09_19-04-19.mkv
 
 * Only re-encode: `$ obs-cut -i Replay_2019-10-09_19-04-19.mkv`
-* Start from second 5 to end, only include audio from game `$ obs-cut -i Replay_2019-10-09_19-04-19.mkv -f 5 -a game****`
+* Start from second 5 to end, only include audio from game `$ obs-cut -i Replay_2019-10-09_19-04-19.mkv -f 5 -a game`
 * From sec 5, to sec 10, include game and voice app output, no mic or other apps `$ obs-cut -i Replay_2019-10-09_19-04-19.mkv -f 5 -t 10 -a "game com"`
