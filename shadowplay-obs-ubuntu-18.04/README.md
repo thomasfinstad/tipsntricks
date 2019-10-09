@@ -3,7 +3,25 @@
 *A sink is an output device, you "sink" the audio into it. The sound card your speakers are connected to is a sink*
 If you wish to be able to pick which sounds that is included in your clips you need to follow all steps, if you do not care about this you can jump straight to the section for OBS install *section 2.1* then to the NVENC config *section 2.2.4*
 
+- [Shadowplay like functionality on Linux using OBS](#shadowplay-like-functionality-on-linux-using-obs)
+  * [1 PulseAudio](#1-pulseaudio)
+    + [1.1 Find your preffered sample rate](#11-find-your-preffered-sample-rate)
+    + [1.2 Set your default sample rate](#12-set-your-default-sample-rate)
+    + [1.3 Create virtual sinks for game and voice sounds](#13-create-virtual-sinks-for-game-and-voice-sounds)
+    + [1.4 Change sink for the game and voice application](#14-change-sink-for-the-game-and-voice-application)
+  * [2 OBS](#2-obs)
+    + [2.1 Install ffmpeg and obs-stuido](#21-install-ffmpeg-and-obs-stuido)
+    + [2.2 Configure OBS](#22-configure-obs)
+      - [2.2.1 Add game video input](#221-add-game-video-input)
+      - [2.2.2 Add audio inputs](#222-add-audio-inputs)
+      - [2.2.3 Audio Settings](#223-audio-settings)
+      - [2.2.4 NVENC Settings in OBS](#224-nvenc-settings-in-obs)
+      - [2.2.5 Auto start replaybuffer](#225-auto-start-replaybuffer)
+  * [3 Clip cutting](#3-clip-cutting)
+    + [3.1 Install cli function](#31-install-cli-function)
+    + [3.2 Example usage](#32-example-usage)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1 PulseAudio
 If you wish to be able to pick which sounds to include in your clips you will have to make some simple changes to pulseaudio
