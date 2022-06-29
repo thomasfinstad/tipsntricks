@@ -22,9 +22,9 @@ $ nvidia-settings --assign CurrentMetaMode="DPY-1: 3840x1080_240 +0+0 {ViewPortI
 
 However in Counter-Strike:Global Offensive  (csgo) the support for ultrawide is quite... meh, and the image contorts more than what is playable.
 
-I am used to playing with a resolution from a 4:3 aspect ratio, streched out to a 16:9 screen, but that is just preference.
+I am used to playing with a resolution from a 4:3 aspect ratio, stretched out to a 16:9 screen, but that is just preference.
 
-When playing a 16:9 resolution streched out to a 32:9 screen, things become too much, even for people who like to play streched.
+When playing a 16:9 resolution stretched out to a 32:9 screen, things become too much, even for people who like to play stretched.
 
 ## Solution 2
 
@@ -58,9 +58,9 @@ This will leave black bars at the edge of your screen
 $ nvidia-settings --assign CurrentMetaMode="DPY-1: 3840x1080_240 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+960+0}"
 ```
 
-### Set 1080p streched
+### Set 1080p stretched
 
-This will leave black bars at the edge of your screen and strech out the image to make the 16:9 image on ultrawide as streched as 4:3 looked on a normal 16:9 monitor.
+This will leave black bars at the edge of your screen and stretch out the image to make the 16:9 image on ultrawide as stretched as 4:3 looked on a normal 16:9 monitor.
 
 *Remember to start "game mode" on the monitor, or how you like to configure it, to enable 240hz.*
 
